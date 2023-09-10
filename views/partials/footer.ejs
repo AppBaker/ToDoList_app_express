@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+for (let index = 0; index < $("ul>li>a").length; index++) {
+    const element = $("ul>li>a")[index];
+    // element.addClass("active");
+    // $("ul>li>a")[index].addClass("active");
+    if (element.text === window.location.pathname.slice(1)) {
+        element.classList.add("active");
+        $("form").prop("action", window.location.pathname);
+    }
+    
+}
+
+// $("ul>li>a").forEach(element => {
+//     element.addClass("active");
+// });
+
+
+</script>
+</body>
+<footer>
+    <div class="container text-center">
+        <p class="mt-5 mb-3 text-body-secondary justify-content-center">Copyright © Ivan Nikitin 2023</p>
+        <!-- <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p> -->
+    </div>
+</footer>
+</html>
